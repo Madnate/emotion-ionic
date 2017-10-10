@@ -1,0 +1,25 @@
+<ion-content>
+
+  <ion-fab left top small>
+    <button (click)="signOut()" ion-fab color="light"><ion-icon name="exit"></ion-icon></button>
+  </ion-fab>
+
+  <ion-fab left bottom small>
+    <button *ngIf="!hideButtonPicture" (click)="resetpicture()" ion-fab color="light"><ion-icon name="refresh"></ion-icon></button>
+  </ion-fab>
+
+  <ion-fab center bottom small>
+    <button *ngIf="!hideButtonTakepicture" (click)="takePicture()" ion-fab color="light"><ion-icon name="aperture"></ion-icon></button>
+  </ion-fab>
+
+  <ion-fab cente small>
+    <span *ngIf="youremotion">{{ youremotion }}</span>
+  </ion-fab>
+
+  <ion-fab right bottom small>
+    <button *ngIf="!hideButtonPicture" (click)="analyzePicture()" ion-fab color="light"><ion-icon name="checkmark"></ion-icon></button>
+  </ion-fab>
+
+  <img id="previewPicture" src="">
+
+</ion-content>
